@@ -176,9 +176,13 @@ function today_game_list() {
             let games = response['game']
             if (games.length == 0) {
                 let temp_html = `<tr>
-                                    <td><p></p></td>
-                                    <td><p>경기가 없습니다.</p></td>
-                                    <td><p></p></td>
+                                    <td colspan="3"><p></p></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" id="no_match">경기가 없습니다.</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3"><p></p></td>
                                 </tr>`
                 $('#change_game_table > tbody').append(temp_html)
             } else {
@@ -227,9 +231,13 @@ function get_game_list(a, b, c) {
             let games = response['games']
             if (games.length == 0) {
                 let temp_html = `<tr>
-                                    <td><p></p></td>
-                                    <td><p>경기가 없습니다.</p></td>
-                                    <td><p></p></td>
+                                    <td colspan="3" id="no_match"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" id="no_match">경기가 없습니다.</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" id="no_match"></td>
                                 </tr>`
                 $('#change_game_table > tbody').append(temp_html)
             } else {
@@ -251,7 +259,7 @@ function get_game_list(a, b, c) {
                                         <td>${game_time}</td>
                                         <td>${left_team} <strong>${game_score}</strong> ${right_team}</td>
                                         <td>${game_place}</td>
-                                    </tr>`
+                                     </tr>`
                     }
                     $('#change_game_table > tbody').append(temp_html)
                 }

@@ -2,6 +2,16 @@ html, body {
     font-family: 'Gaegu', cursive;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
+}
+
 .mytitle {
     height: 230px;
     width: 100%;
@@ -21,6 +31,13 @@ html, body {
 .mytitle > h1 {
     font-weight: bold;
     font-size: 65px;
+    max-width: 1000px;
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar {
@@ -52,7 +69,6 @@ html, body {
 #container {
     position: relative;
     margin: 70px auto;
-    width: 100%;
 }
 
 #container .row col {
@@ -60,18 +76,23 @@ html, body {
 }
 
 #calendar {
-    width: 100%;
+    max-width: 550px;
+    width: 95%;
     font-family: 'Gaegu', sans-serif;
 }
 
 #calendar_weekdays div {
     display: inline-block;
     vertical-align: top;
+
+    max-width: 550px;
+    width: 95%;
 }
 
 #calendar_content, #calendar_weekdays, #calendar_header {
     position: relative;
-    width: 320px;
+    max-width: 550px;
+    width: 95%;
     overflow: hidden;
     float: left;
     z-index: 10;
@@ -174,7 +195,7 @@ i[class^="fa-solid"] {
 /* 오늘의 경기 */
 #today_game_wrap {
     font-family: 'Gaegu', cursive;
-    margin-top: -8px;
+    margin-top: -5px;
     max-width: 550px;
     width: 100%;
 }
@@ -206,13 +227,16 @@ i[class^="fa-solid"] {
 }
 
 #today_game_table thead {
+    width: 550px;
+    height: 40px;
+
     position: sticky;
     top: 0;
     background-color: #DDECEE;
     font-weight: bold;
 }
 
-#today_game_table thead th{
+#today_game_table thead th {
     padding: 7px;
     font-size: 18px;
 }
@@ -241,12 +265,6 @@ i[class^="fa-solid"] {
     background-color: #f4f4f6;
 }
 
-#today_game_table tbody p {
-    margin: 35px 40px 0 40px;
-    font-size: 23px;
-    width: 100%;
-}
-
 /*score 글씨 크기 조정*/
 #today_game_table tbody tr > td strong {
     font-size: 19px;
@@ -266,6 +284,7 @@ i[class^="fa-solid"] {
     background-color: #0B2161;
     color: #edf2f4;
     font-size: 18px;
+    height: 38px;
 }
 
 #change_game_table {
@@ -277,17 +296,20 @@ i[class^="fa-solid"] {
 }
 
 #change_game_table thead {
+    max-width: 550px;
+    width: 100%;
+    height: 40px;
+
     position: sticky;
     top: 0;
     background-color: #DDECEE;
-    height: 38px;
     font-weight: bold;
-    max-width: 550px;
-    width: 100%;
 }
 
 #change_game_table thead th {
     padding: 7px;
+    width: 100%;
+    height: 40px;
     font-size: 18px;
 }
 
@@ -316,18 +338,18 @@ i[class^="fa-solid"] {
 }
 
 /*선택한 날짜에 경기 일정이 없을때*/
-#change_game_table tbody p {
-    margin: 35px 40px 0 40px;
-    font-size: 23px;
-    width: 100%;
+#no_match {
+    width: 550px;
+    height: 32px;
+    margin: auto;
+    background-color: white;
+    font-size: 21px;
 }
 
 /*score 글씨 크기 조정*/
 #change_game_table tbody tr > td strong {
     font-size: 19px;
 }
-
-
 
 
 
